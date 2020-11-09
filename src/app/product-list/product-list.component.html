@@ -1,7 +1,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Image</th>
+            <th>Imagen</th>
             <th>Nombre</th>
             <th>Tipo</th>
             <th>Precio</th>
@@ -9,18 +9,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th><img class="img-fluid img-thumbnail" [src]=beer.image [alt]=beer.name/> </th>
-            <th>{{beer.name}}</th>
-            <th>{{beer.type}}</th>
-            <th>{{beer.price}}</th>
-            <th>{{beer.stock}}</th>
+        <tr *ngFor="let product of products" [ngClass]="{'clearance': product.clearance}">
+            <th><img class="img-fluid img-thumbnail" [src]=product.image [alt]=product.name/></th>
+            <th>{{product.name}}</th>
+            <th>{{product.type}}</th>
+            <th>{{product.price | currency}}</th>
+            <th><span *ngIf="product.stock==0" class="badge badge-secondary">SIN STOCK</span></th>
         </tr>
-        <tr>
-            <td>Red Wine</td>
-            <td>Barley wine</td>
-            <td>40</td>
-            <td>1200</td>
-        </tr>
+        
     </tbody>
 </table>
