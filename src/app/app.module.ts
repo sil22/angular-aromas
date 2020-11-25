@@ -1,22 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ShipCartComponent } from './ship-cart/ship-cart.component';
+import { AromasAboutComponent } from './aromas-about/aromas-about.component';
+import { AromasProductsComponent } from './aromas-products/aromas-products.component';
+import { AromasCartComponent } from './aromas-cart/aromas-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    ShipCartComponent
+    AromasAboutComponent,
+    AromasProductsComponent,
+    AromasCartComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,4 +6,5 @@ export interface Product {
     price: number;
     image: string;
     clearance: boolean;
+    quantity: number;
 }

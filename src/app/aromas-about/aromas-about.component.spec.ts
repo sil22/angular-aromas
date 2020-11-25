@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShipCartComponent } from './ship-cart.component';
+import { AromasAboutComponent } from './aromas-about.component';
 
-describe('ShipCartComponent', () => {
-  let component: ShipCartComponent;
-  let fixture: ComponentFixture<ShipCartComponent>;
+describe('AromasAboutComponent', () => {
+  let component: AromasAboutComponent;
+  let fixture: ComponentFixture<AromasAboutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShipCartComponent ]
+      declarations: [ AromasAboutComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ShipCartComponent);
+    fixture = TestBed.createComponent(AromasAboutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

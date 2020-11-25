@@ -6,15 +6,22 @@
             <th>Tipo</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Compra</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let product of products" [ngClass]="{'clearance': product.clearance}">
-            <th><img class="img-fluid img-thumbnail" [src]=product.image [alt]=product.name/></th>
+            <th><img class="img-thumbnail" width="100" [src]=product.image [alt]=product.name/></th>
             <th>{{product.name}}</th>
             <th>{{product.type}}</th>
             <th>{{product.price | currency}}</th>
             <th><span *ngIf="product.stock==0" class="badge badge-secondary">SIN STOCK</span></th>
+            <th>
+                <button class="btn btn-secondary btn-sm" (click)="decreaseQuantity(product)">-</button>
+                <input type="text" [(ngModel)]="product.quantity">
+                <button class="btn btn-secondary btn-sm" (click)="increaseQuantity(product)">+</button>
+                {{product.quantity}}
+            </th>
         </tr>
         
     </tbody>
