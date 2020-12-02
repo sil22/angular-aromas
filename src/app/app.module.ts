@@ -9,6 +9,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { AromasAboutComponent } from './aromas-about/aromas-about.component';
 import { AromasProductsComponent } from './aromas-products/aromas-products.component';
 import { AromasCartComponent } from './aromas-cart/aromas-cart.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AromasCartComponent } from './aromas-cart/aromas-cart.component';
     ProductListComponent,
     AromasAboutComponent,
     AromasProductsComponent,
-    AromasCartComponent
+    AromasCartComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

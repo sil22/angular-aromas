@@ -37,34 +37,13 @@ export class ProductListComponent implements OnInit {
       quantity: 0,
     }
   ]
-  @Input() quantity: number = 0;
-  //@Input()  currentStock: number;
-
-  @Output() quantChange = new EventEmitter<number>();
-  //@Output() maxQuatity = new EventEmitter<number>();
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  decreaseQuantity(prod : Product): void {
-    
-    if(prod.quantity > 0) 
-      prod.quantity--;
-    
-    /*if(this.quant > 0)
-      this.quant--;
-      this.quantChange.emit(this.quant);*/
-  }
-
-  increaseQuantity(prod : Product): void {
-    if(prod.quantity < prod.stock)
-      prod.quantity++;
-
-/*    if(this.quant < 5)
-      this.quant++;
-      this.quantChange.emit(this.quant);*/
+  maxReached(m: string){
+    alert(m);
   }
 
 }
