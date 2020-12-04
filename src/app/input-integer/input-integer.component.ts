@@ -33,6 +33,8 @@ export class InputIntegerComponent implements OnInit {
   increaseQuantity(): void {
     if(this.quantity < this.max){
       this.quantity++;
+      console.log(this.quantity);
+      
       this.quantityChange.emit(this.quantity);
     }
     else {

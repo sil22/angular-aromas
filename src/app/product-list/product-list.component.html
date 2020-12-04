@@ -17,7 +17,8 @@
             <th>{{product.price | currency}}</th>
             <th><span *ngIf="product.stock==0" class="badge badge-secondary">SIN STOCK</span></th>
             <th>
-                <app-input-integer [quantity]="product.quantity" [max]="product.stock" (maxChange)="maxReached($event)" *ngIf="product.stock"></app-input-integer>
+                <app-input-integer [(quantity)]="product.quantity" [max]="product.stock" (maxChange)="maxReached($event)" *ngIf="product.stock"></app-input-integer>
+                <button class="btn btn-primary" (click)="addToCart(product)" *ngIf="product.stock && product.quantity >= 1">Comprar</button>
             </th>
         </tr>
         
