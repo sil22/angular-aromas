@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ProductCartService } from '../services/product-cart.service';
-import { ProductDataService } from '../services/product-data.service';
 import { Product } from './Product';
 
 @Component({
@@ -10,15 +9,49 @@ import { Product } from './Product';
 })
 export class ProductListComponent implements OnInit {
 
-  products: Product[] = [];
+  products: Product[] = [
+    {
+      name: "Mango y Pomelo rosado",
+      type: "Difusor",
+      price: 350,
+      stock: 10,
+      image: "assets/img/mango.jpeg",
+      clearance: false,
+      quantity: 0,
+    },
+    {
+      name: "Lima Limon",
+      type: "Difusor",
+      price: 500,
+      stock: 5,
+      image: "assets/img/limon.jpeg",
+      clearance: true,
+      quantity: 0,
+    },
+    {
+      name: "Mora y frambuesa",
+      type: "Difusor",
+      price: 500,
+      stock: 0,
+      image: "assets/img/moraframbuesa.jpeg",
+      clearance: false,
+      quantity: 0,
+    },
+    {
+      name: "Pure Joy",
+      type: "Difusor",
+      price: 750,
+      stock: 6,
+      image: "assets/img/pureJoy.png",
+      clearance: false,
+      quantity: 0,
+    }
+  ];
 
-  constructor(
-    private cart: ProductCartService,
-    private prodDataService: ProductDataService) {
+  constructor(private cart: ProductCartService) {
     }
 
   ngOnInit(): void {
-    this.prodDataService.getAll().subscribe(prods => this.products = prods);
   }
 
   addToCart(prod): void {

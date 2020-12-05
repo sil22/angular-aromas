@@ -3,13 +3,17 @@
     margin-left: 40px;
 }
 
+nav {
+    background-color: rgba(180, 84, 228, 0.242);
+    box-shadow: 2px -1px 10px 1px #888;
+}
+
 .footer {
-    background-color: #f8f9fa;
+    background-color: rgba(180, 84, 228, 0.242);
     width: 100%;
     height: 50px;
     text-align: center;
     padding: 10px;
-    position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
@@ -17,4 +21,8 @@
 
 .container {
     margin-top: 50px;
+}
+
+.cart-cont, .about, .table  {
+    box-shadow: 2px -1px 10px 1px #888;
 }
